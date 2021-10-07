@@ -13,8 +13,9 @@ and open the template in the editor.
         <bean id="Vue" class="fr.ufrsciencestech.panier.View.VueGraphiqueSimple"></bean>
 
         <!-- ===== ManagerFactory ===== -->
-	<bean id="MVC" class="fr.ufrsciencestech.panier.View.TestMVC">
+	<bean id="MVC" class="fr.ufrsciencestech.panier.Test.TestMVC">
             <property name="vueg" ref="Vue"/>
+            <property name="controleur" ref="Controleur"/>
         </bean>
 
 </beans>
