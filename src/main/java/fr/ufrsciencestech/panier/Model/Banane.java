@@ -10,9 +10,11 @@ package fr.ufrsciencestech.panier.Model;
  * @author ct434953
  */
 public class Banane extends FruitSimple{
-
+    private String origine;
+    private double prix;
+    
     public Banane(double prix, String origine){
-        super();
+        super(prix, origine);
     }
     @Override
     public boolean isSeedless() {

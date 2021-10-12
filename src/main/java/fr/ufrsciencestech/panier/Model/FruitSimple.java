@@ -18,6 +18,10 @@ public abstract class FruitSimple implements Fruit{
     public abstract boolean isSeedless();
     public abstract String toString();
     
+    public FruitSimple(double prix, String origine){
+        this.prix = prix;
+        this.origine = origine;
+    }
     @Override
     public double getPrix() {
         return this.prix;

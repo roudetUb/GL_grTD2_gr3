@@ -12,7 +12,7 @@ package fr.ufrsciencestech.panier.Model;
 public class Cerise extends FruitSimple{
 
     public Cerise(double prix, String origine){
-        super();
+        super(prix,origine);
     }
     @Override
     public boolean isSeedless() {

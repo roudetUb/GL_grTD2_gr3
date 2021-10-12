@@ -43,8 +43,12 @@ public class TestMVC {
         this.controleur = controleur;
     }
 
-    public static void main(String[] args){
+    public static void main(String[] args) throws PanierPleinException{
         Panier p = new Panier(4);
+        p.ajoute(new Banane(3.5,"france"));
+        p.ajoute(new Cerise(5,"Espagne"));
+        System.out.println(p.getFruits(0).toString());
+        System.out.println(p.getFruits(1).toString());
         //une vue console abonnee au panier :
         VueConsole vuec = new VueConsole();
         p.addObserver(vuec);
