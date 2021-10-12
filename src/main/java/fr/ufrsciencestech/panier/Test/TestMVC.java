@@ -15,6 +15,7 @@ public class TestMVC {
     private VueGraphique vueg;      //pour pouvoir changer de vue si on le souhaite
     private Controleur controleur;  //pour pouvoir changer de controleur si on le souhaite
     
+    
     /**
      * @return the vueg
      */
@@ -55,11 +56,14 @@ public class TestMVC {
         
         //une vue graphique simple abonnee au panier :
         VueGraphiqueSimple vueg = new VueGraphiqueSimple();
+        VueGraphiqueList vueGraphListe= new VueGraphiqueList();
+        
         //VueGraphiqueSimpleAWT vueg = new VueGraphiqueSimpleAWT();
         Controleur cs = new ControleurSimple();
         cs.setPanier(p);
         p.addObserver(vueg);
         vueg.addControleur(cs);
+        vueGraphListe.addControleur(cs);
         
         //La meme chose que ci-dessus mais avec SpringIoC :
         /*ApplicationContext context = new ClassPathXmlApplicationContext("beans.xml");

@@ -21,6 +21,7 @@ public class VueGraphiqueSimple extends JFrame implements VueGraphique {
     private final JButton inc;
     private final JButton dec;
     private JLabel affiche;
+
     /**
      * @return the inc
      */
